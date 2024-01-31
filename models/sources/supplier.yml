@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: SUPPLIER_H
+    tags: ['HUB']
+    columns:
+      - name: HK_SUPPLIER_H
+        tests:
+          - unique
+          - not_null   
+  - name: SUPPLIER_N_S
+    tags: ['SATELLITE']
+    tests:
+    - dbt_utils.unique_combination_of_columns:
+        combination_of_columns: 
+          - HK_SUPPLIER_H
+          - ldts    
+    columns:
+      - name: HK_SUPPLIER_H
+        tests:
+          - not_null
+          - relationships:
+              to: ref('SUPPLIER_H')
+              field: HK_SUPPLIER_H
+  - name: SUPPLIER_P_S
+    tags: ['SATELLITE']
+    tests:
+    - dbt_utils.unique_combination_of_columns:
+        combination_of_columns: 
+          - HK_SUPPLIER_H
+          - ldts    
+    columns:
+      - name: HK_SUPPLIER_H
+        tests:
+          - not_null
+          - relationships:
+              to: ref('SUPPLIER_H')
+              field: HK_SUPPLIER_H

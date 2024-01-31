@@ -1,0 +1,14 @@
+version: 2
+sources:
+  - name: TPCH
+    schema: TPCH_SF1
+    tables:
+    -  name: LineItem
+    -  name: Supplier
+    -  name: PartSupp
+  - name: TPCH
+    schema: dwhstage
+    tables:
+    -  name: Customer
+    -  name: Orders
+    -  name: Part

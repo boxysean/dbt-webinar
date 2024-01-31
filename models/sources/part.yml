@@ -1,0 +1,23 @@
+version: 2
+models:
+  - name: PART_H
+    tags: ['HUB']
+    columns:
+      - name: HK_PART_H
+        tests:
+          - unique
+          - not_null   
+  - name: PART_N_S
+    tags: ['SATELLITE']
+    tests:
+    - dbt_utils.unique_combination_of_columns:
+        combination_of_columns: 
+          - HK_PART_H
+          - ldts    
+    columns:
+      - name: HK_PART_H
+        tests:
+          - not_null
+          - relationships:
+              to: ref('PART_H')
+              field: HK_PART_H
