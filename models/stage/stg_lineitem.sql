@@ -14,7 +14,7 @@ hashed_columns:
 
 
 rsrc: '!LineItem' 
-ldts: 'sysdate'
+ldts: 'sysdate()'
 include_source_columns: true
 
 {%- endset -%}

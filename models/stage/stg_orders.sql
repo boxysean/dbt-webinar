@@ -24,7 +24,7 @@ hashed_columns:
 
 
 rsrc: '!Orders' 
-ldts: 'sysdate'
+ldts: 'sysdate()'
 include_source_columns: true
 
 {%- endset -%}

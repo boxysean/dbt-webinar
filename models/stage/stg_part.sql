@@ -21,7 +21,7 @@ hashed_columns:
 
 
 rsrc: '!Part' 
-ldts: 'sysdate'
+ldts: 'sysdate()'
 include_source_columns: true
 
 {%- endset -%}

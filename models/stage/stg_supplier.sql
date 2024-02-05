@@ -20,7 +20,7 @@ hashed_columns:
 
 
 rsrc: '!Supplier' 
-ldts: 'sysdate'
+ldts: 'sysdate()'
 include_source_columns: true
 
 {%- endset -%}
