@@ -2,6 +2,7 @@ version: 2
 sources:
   - name: TPCH
     schema: TPCH_SF1
+    database: SNOWFLAKE_SAMPLE_DATA
     tables:
     -  name: Customer
     -  name: Orders
