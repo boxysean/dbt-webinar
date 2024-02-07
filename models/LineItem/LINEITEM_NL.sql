@@ -27,7 +27,7 @@ source_models:
 link_hashkey: HK_LINEITEM_NL 
 foreign_hashkeys: 
   - 'HK_PART_H'
-  - 'HK_ORDERS_H'
+  - 'HK_ORDER_H'
   - 'HK_SUPPLIER_H'
   - 'L_LINENUMBER'
 

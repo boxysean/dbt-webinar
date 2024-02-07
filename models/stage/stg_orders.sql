@@ -10,6 +10,10 @@ hashed_columns:
   HK_ORDERS_CUSTOMERS_L:
     - O_ORDERKEY
     - O_CUSTKEY
+  HK_CUSTOMER_H:
+    - O_CUSTKEY
+  HK_ORDER_H:
+    - O_ORDERKEY
   hd_ORDERS_N_S:
     is_hashdiff: true
     columns:
@@ -24,7 +28,7 @@ hashed_columns:
 
 
 rsrc: '!Orders' 
-ldts: 'sysdate'
+ldts: 'sysdate()'
 include_source_columns: true
 
 {%- endset -%}

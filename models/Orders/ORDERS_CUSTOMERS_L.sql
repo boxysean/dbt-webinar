@@ -5,12 +5,12 @@
 source_models: 
   - name: stg_orders
     fk_columns: 
-      - 'HK_ORDERS_H'
+      - 'HK_ORDER_H'
       - 'HK_CUSTOMER_H'
     rsrc_static: 'Orders'
 link_hashkey: HK_ORDERS_CUSTOMERS_L 
 foreign_hashkeys: 
-  - 'HK_ORDERS_H'
+  - 'HK_ORDER_H'
   - 'HK_CUSTOMER_H'
 {%- endset -%}
 

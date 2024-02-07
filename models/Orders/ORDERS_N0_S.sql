@@ -1,10 +1,10 @@
 {{ config(schema='rdv',
            materialized='incremental',
-           unique_key=['HK_ORDERS_H', 'ldts']) }} 
+           unique_key=['HK_ORDER_H', 'ldts']) }} 
 
 {%- set yaml_metadata -%}
 source_model: "stg_orders" 
-parent_hashkey: "HK_ORDERS_H"
+parent_hashkey: "HK_ORDER_H"
 src_hashdiff: 'hd_ORDERS_N_S'
 src_payload: 
   - o_clerk

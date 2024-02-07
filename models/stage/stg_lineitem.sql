@@ -10,11 +10,17 @@ hashed_columns:
     - L_ORDERKEY
     - L_SUPPKEY
     - L_LINENUMBER
+  HK_ORDER_H:
+    - L_ORDERKEY
+  HK_PART_H:
+    - L_PARTKEY
+  HK_SUPPLIER_H:
+    - L_SUPPKEY
 
 
 
 rsrc: '!LineItem' 
-ldts: 'sysdate'
+ldts: 'sysdate()'
 include_source_columns: true
 
 {%- endset -%}

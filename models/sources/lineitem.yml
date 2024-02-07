@@ -8,11 +8,11 @@ models:
           - unique
           - not_null     
       
-      - name: HK_ORDERS_H
+      - name: HK_ORDER_H
         tests:
           - relationships:
               to: ref('ORDERS_H')
-              field: HK_ORDERS_H
+              field: HK_ORDER_H
       - name: HK_PART_H
         tests:
           - relationships:

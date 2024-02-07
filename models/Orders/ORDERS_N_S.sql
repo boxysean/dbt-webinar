@@ -3,7 +3,7 @@
 
 {%- set yaml_metadata -%}
 sat_v0: 'ORDERS_N0_S'
-hashkey: "HK_ORDERS_H"
+hashkey: "HK_ORDER_H"
 hashdiff: 'hd_ORDERS_N_S'
 {%- endset -%}
 

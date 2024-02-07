@@ -8,6 +8,10 @@ hashed_columns:
   HK_PART_SUPPLIER_L:
     - PS_PARTKEY
     - PS_SUPPKEY
+  HK_PART_H:
+    - PS_PARTKEY
+  HK_SUPPLIER_H:
+    - PS_SUPPKEY
   hd_PART_SUPPLIER_N_S:
     is_hashdiff: true
     columns:
@@ -18,7 +22,7 @@ hashed_columns:
 
 
 rsrc: '!PartSupp' 
-ldts: 'sysdate'
+ldts: 'sysdate()'
 include_source_columns: true
 
 {%- endset -%}
