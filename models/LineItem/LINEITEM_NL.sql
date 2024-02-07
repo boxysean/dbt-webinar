@@ -6,7 +6,7 @@ source_models:
   stg_lineitem:
     fk_columns: 
       - 'HK_PART_H'
-      - 'HK_ORDERS_H'
+      - 'HK_ORDER_H'
       - 'HK_SUPPLIER_H'
       - 'L_LINENUMBER'
     payload:
