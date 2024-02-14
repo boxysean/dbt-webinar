@@ -1,8 +1,8 @@
 version: 2
 sources:
   - name: TPCH
-    schema: TPCH_SF1
-    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF001
+    database: RAW
     tables:
     -  name: Customer
     -  name: Orders
