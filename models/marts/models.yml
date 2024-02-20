@@ -19,6 +19,7 @@ models:
         description: Primary phone number provided for handling general inquiries
       - name: account_balance
         description: Latest account balance recorded in our systems
+
       - name: market_segment
         description: The area of industry the customer operates within
         tests:
@@ -29,6 +30,7 @@ models:
                 - "FURNITURE"
                 - "HOUSEHOLD"
                 - "MACHINERY"
+                - "AUTOMOBILE"
 
   - name: fct_orders
     description: >
