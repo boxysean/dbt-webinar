@@ -25,6 +25,7 @@ models:
           - accepted_values:
               values:
                 - "(unknown)"  # This is from the DV Ghost Record
+                - "AUTOMOBILE"
                 - "BUILDING"
                 - "FURNITURE"
                 - "HOUSEHOLD"
