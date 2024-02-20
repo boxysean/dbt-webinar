@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: >
+      A dimensional model of all the customers in our databases. It brings together the
+      most important attributes used in common analyses across the organization.
+    columns:
+      - name: customer_key
+        description: Customer primary key, as known from source system.
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: Customer company name
+      - name: address
+        description: Customer billing address (not shipping address -- see other column)
+      - name: phone
+        description: Primary phone number provided for handling general inquiries
+      - name: account_balance
+        description: Latest account balance recorded in our systems
+      - name: market_segment
+        description: The area of industry the customer operates within
+        tests:
+          - accepted_values:
+              values:
+                - "(unknown)"  # This is from the DV Ghost Record
+                - "BUILDING"
+                - "FURNITURE"
+                - "HOUSEHOLD"
+                - "MACHINERY"
+      
