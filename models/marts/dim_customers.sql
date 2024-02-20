@@ -1,7 +1,7 @@
 -- Why PITs? Fast: PITs have the whole history pre-populated, so queries are faster
 
 select 
-  pit.hk_customer_h,
+  c_custkey as customer_key,
   c_name as name,
   c_address as address,
   c_phone as phone,
