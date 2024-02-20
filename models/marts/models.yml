@@ -29,4 +29,5 @@ models:
                 - "BUILDING"
                 - "FURNITURE"
                 - "HOUSEHOLD"
+                - "MACHINERY"
       
