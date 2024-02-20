@@ -7,7 +7,7 @@ models:
       most important attributes used in common analyses across the organization.
     columns:
       - name: customer_key
-        description: Customer primary key, as known from source system.
+        description: Customer primary key, as known from source system
         tests:
           - unique
           - not_null
@@ -29,4 +29,21 @@ models:
                 - "FURNITURE"
                 - "HOUSEHOLD"
                 - "MACHINERY"
-      
+
+  - name: fct_orders
+    description: >
+      A fact model of all the orders in our databases.
+    columns:
+      - name: order_key
+        description: Order primary key, as known from source system
+        tests:
+          - unique
+          - not_null
+      - name: part_count
+        description: The number of parts associated with the order
+      - name: total_discount
+        description: Total amount of discounts applied to the order
+      - name: total_tax
+        description: Total amount of tax applied to the order
+      - name: price
+        description: Total price of the order
