@@ -30,6 +30,7 @@ models:
                 - "FURNITURE"
                 - "HOUSEHOLD"
                 - "MACHINERY"
+                - "AUTOMOBILE"
 
   - name: fct_orders
     description: >
