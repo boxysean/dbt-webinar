@@ -1,0 +1,41 @@
+version: 2
+models:
+  - name: ORDERS_H
+    tags: ['HUB']
+    columns:
+      - name: HK_ORDER_H
+        tests:
+          - unique
+          - not_null   
+  - name: ORDERS_CUSTOMERS_L
+    tags: ['LINK']
+    columns:
+      - name: HK_ORDERS_CUSTOMERS_L
+        tests:
+          - unique
+          - not_null     
+      
+      - name: HK_CUSTOMER_H
+        tests:
+          - relationships:
+              to: ref('CUSTOMER_H')
+              field: HK_CUSTOMER_H
+      - name: HK_ORDER_H
+        tests:
+          - relationships:
+              to: ref('ORDERS_H')
+              field: HK_ORDER_H
+  - name: ORDERS_N_S
+    tags: ['SATELLITE']
+    tests:
+    - dbt_utils.unique_combination_of_columns:
+        combination_of_columns: 
+          - HK_ORDER_H
+          - ldts    
+    columns:
+      - name: HK_ORDER_H
+        tests:
+          - not_null
+          - relationships:
+              to: ref('ORDERS_H')
+              field: HK_ORDER_H

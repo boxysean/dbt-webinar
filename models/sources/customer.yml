@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: CUSTOMER_H
+    tags: ['HUB']
+    columns:
+      - name: HK_CUSTOMER_H
+        tests:
+          - unique
+          - not_null   
+  - name: CUSTOMER_N_S
+    tags: ['SATELLITE']
+    tests:
+    - dbt_utils.unique_combination_of_columns:
+        combination_of_columns: 
+          - HK_CUSTOMER_H
+          - ldts    
+    columns:
+      - name: HK_CUSTOMER_H
+        tests:
+          - not_null
+          - relationships:
+              to: ref('CUSTOMER_H')
+              field: HK_CUSTOMER_H
+  - name: CUSTOMER_P_S
+    tags: ['SATELLITE']
+    tests:
+    - dbt_utils.unique_combination_of_columns:
+        combination_of_columns: 
+          - HK_CUSTOMER_H
+          - ldts    
+    columns:
+      - name: HK_CUSTOMER_H
+        tests:
+          - not_null
+          - relationships:
+              to: ref('CUSTOMER_H')
+              field: HK_CUSTOMER_H

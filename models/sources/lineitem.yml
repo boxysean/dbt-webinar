@@ -1,0 +1,25 @@
+version: 2
+models:
+  - name: LINEITEM_NL
+    tags: ['LINK']
+    columns:
+      - name: HK_LINEITEM_NL
+        tests:
+          - unique
+          - not_null     
+      
+      - name: HK_ORDER_H
+        tests:
+          - relationships:
+              to: ref('ORDERS_H')
+              field: HK_ORDER_H
+      - name: HK_PART_H
+        tests:
+          - relationships:
+              to: ref('PART_H')
+              field: HK_PART_H
+      - name: HK_SUPPLIER_H
+        tests:
+          - relationships:
+              to: ref('SUPPLIER_H')
+              field: HK_SUPPLIER_H
