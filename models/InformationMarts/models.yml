@@ -1,7 +1,7 @@
 version: 2
 
 models: 
-  - name: Customers_D
+  - name: Customer_D
     description: This model consolidates customer information, including personal details, market segment, and order history. It provides a comprehensive view of a customer's lifetime interactions and value, helping to analyze customer behaviors and trends.
     columns:
       - name: c_custkey
@@ -43,7 +43,7 @@ models:
       - name: lifetime_value
         description: The total amount spent by the customer across all orders.
 
-  - name: orders_f
+  - name: Orders_F
     description: This model aggregates order-related data to provide a summary of order key, customer key, order date, and the total amount of purchased items.
     columns:
       - name: o_orderkey
