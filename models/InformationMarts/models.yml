@@ -28,6 +28,7 @@ models:
                 - MACHINERY
                 - BUILDING
                 - FURNITURE
+                - AUTOMOBILE
                 - "(error)"
                 - "(unknown)"
 
